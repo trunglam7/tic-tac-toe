@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.tile-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: max(250px, 25%);
+    aspect-ratio: 1 / 1;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+}
+
+.tile-container button:hover{
+    background-color: cornflowerblue;
+}
+
+.reset-btn{
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: none;
+}
+
+.reset-active{
+    display: block;
+}
+
+.user{
+    background-image: url('./images/o.png');
+}
+
+.ai{
+    background-image: url('./images/x.png');
+}
+
+.win{
+    background-color: lime;
+}
+
+.lose{
+    background-color: red;
+}
+
+.draw{
+    background-color: lightgray;
+}
+/* Style corner tiles */
+#tile-0{
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+}
+
+#tile-2{
+    border-bottom: 1px black solid;
+    border-left: 1px black solid;
+}
+
+#tile-6{
+    border-top: 1px black solid;
+    border-right: 1px black solid;
+}
+
+#tile-8{
+    border-top: 1px black solid;
+    border-left: 1px black solid;
+}
+
+/* Style side tiles */
+#tile-1{
+    border-bottom: 1px black solid;
+}
+
+#tile-3{
+    border-right: 1px black solid;
+}
+
+#tile-5{
+    border-left: 1px black solid;
+}
+
+#tile-7{
+    border-top: 1px black solid;
+}
